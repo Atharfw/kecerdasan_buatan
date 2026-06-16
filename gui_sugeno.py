@@ -52,7 +52,7 @@ def hitung_sugeno():
 
 root = tk.Tk()
 root.title("Sistem Seleksi Beasiswa (Fuzzy Sugeno)")
-root.geometry("350x300")
+root.geometry("450x380")
 
 tk.Label(root, text="IPK (0.0 - 4.0):").pack()
 entry_ipk = tk.Entry(root)
@@ -67,11 +67,19 @@ entry_tanggungan = tk.Entry(root)
 entry_tanggungan.pack()
 
 tk.Label(root, text="Prestasi (0 - 100 Poin):").pack()
-entry_prestasi = tk.Entry(root)
-
+entry_prestasi = tk.Entry(root, justify='center')
 entry_prestasi.pack()
-tk.Button(root, text="Hitung Prioritas", command=hitung_sugeno).pack(pady=10)
-label_hasil = tk.Label(root, text="Nilai Prioritas (Z): -", font=('Helvetica', 12, 'bold'))
-
+tk.Button(root, text="Hitung Prioritas", command=hitung_sugeno, bg="maroon",fg="white", font=('Helvetica', 11, 'bold')).pack(pady=10)
+label_hasil = tk.Label(root, text="Nilai Prioritas (Z): -", font=('Helvetica', 16, 'bold'))
 label_hasil.pack()
+
+label_kategori = tk.Label(root, text="Kategori Beasiswa: - ", font=('Helvetica', 12, 'bold'))
+label_kategori.pack(pady=5)
+penjelasan_teks =(
+    "Z adalah output 'Crisp Value' dari perhitungan Fuzzy Sugeno.\n "
+    "Nilai Z mewakili skor kelayakan pendaftar (Rentang 30-100).\n"
+    "Semakin tinggi Z, semakin besar peluang mendapatkan beasiswa.\n"
+)   
+tk.Label(root, text=penjelasan_teks, font=('Helvetica', 9, 'italic'),fg="dimgray", justify="center").pack(pady=15)
+
 root.mainloop()
