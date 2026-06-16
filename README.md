@@ -1,4 +1,4 @@
-#Sistem Seleksi Penerima Beasiswa (Logika Fuzzy Sugeno)
+Sistem Seleksi Penerima Beasiswa (Logika Fuzzy Sugeno)
 
 Halo Ibu **Anis Fitri Nur Masruriyah, S.Kom., M.Kom.** selaku dosen pengampu mata kuliah Kecerdasan Buatan. Izinkan kami dari **Kelompok 3** untuk memperkenalkan diri:
 
@@ -13,7 +13,7 @@ Halo Ibu **Anis Fitri Nur Masruriyah, S.Kom., M.Kom.** selaku dosen pengampu mat
 **Program Studi S1 Informatika | UPN "Veteran" Jakarta**
 ---
 
-#Deskripsi Proyek
+Deskripsi Proyek
 Repositori ini berisi implementasi **Logika Fuzzy dengan Metode Sugeno (Orde-Nol)** untuk memecahkan studi kasus penentuan prioritas penerimaan beasiswa mahasiswa. Program ini dibangun menggunakan bahasa pemrograman Python dengan antarmuka grafis (GUI) interaktif menggunakan library `Tkinter`.
 
 Sistem ini memproses 4 variabel *input* utama:
@@ -24,7 +24,7 @@ Sistem ini memproses 4 variabel *input* utama:
 
 Melalui proses *Fuzzifikasi*, *Inferensi* (berdasarkan 9 aturan/rules yang telah didesain), dan *Defuzzifikasi* (Weighted Average), sistem akan mengeluarkan *output* berupa nilai *Crisp* (Z) yang merepresentasikan **Tingkat Prioritas Beasiswa**.
 
-#Cara Menjalankan Aplikasi
+Cara Menjalankan Aplikasi
 1. Pastikan Python sudah terinstal di PC/Laptop Anda.
 2. Clone repositori ini:
    ```bash
