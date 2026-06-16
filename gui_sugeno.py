@@ -4,7 +4,11 @@ from tkinter import messagebox
 def hitung_sugeno():
     try:
         ipk = float(entry_ipk.get())
-        penghasilan = float(entry_penghasilan.get())
+        raw_penghasilan = entry_penghasilan.get()
+        clean_penghasilan = raw_penghasilan.replace(".", "")
+        full_penghasilan = float(clean_penghasilan)
+        penghasilan = full_penghasilan / 1_000_000
+        
         tanggungan = float(entry_tanggungan.get())
         prestasi = float(entry_prestasi.get())
 
@@ -54,7 +58,7 @@ tk.Label(root, text="IPK (0.0 - 4.0):").pack()
 entry_ipk = tk.Entry(root)
 entry_ipk.pack()
 
-tk.Label(root, text="Penghasilan (Juta, misal 4):").pack()
+tk.Label(root, text="Penghasilan (Rp, misal 5.000.000):").pack()
 entry_penghasilan = tk.Entry(root)
 entry_penghasilan.pack()
 
@@ -64,6 +68,7 @@ entry_tanggungan.pack()
 
 tk.Label(root, text="Prestasi (0 - 100 Poin):").pack()
 entry_prestasi = tk.Entry(root)
+
 entry_prestasi.pack()
 tk.Button(root, text="Hitung Prioritas", command=hitung_sugeno).pack(pady=10)
 label_hasil = tk.Label(root, text="Nilai Prioritas (Z): -", font=('Helvetica', 12, 'bold'))
